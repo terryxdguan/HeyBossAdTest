@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>HeyBoss - Your Digital Employees Plan & Execute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f0eef5;
+      color: #1a1a2e;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-wrapper {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+      padding-bottom: 140px; /* space for sticky buttons */
+    }
+
+    /* ---- Hero Section ---- */
+    .hero {
+      background: linear-gradient(180deg, #e8e4f0 0%, #f0eef5 100%);
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+      font-weight: 900;
+      color: #1a1a2e;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: #3a3a5c;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      background: #3a3acd;
+      color: #fff;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    /* ---- How It Works ---- */
+    .how-it-works {
+      padding: 32px 20px 24px;
+    }
+
+    .section-indicator {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .indicator-dot {
+      width: 28px;
+      height: 4px;
+      border-radius: 2px;
+      background: #d0d0e0;
+    }
+
+    .indicator-dot.active {
+      background: #3b3b98;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+    }
+
+    /* ---- Step Cards ---- */
+    .step-card {
+      border-radius: 20px;
+      padding: 24px 20px;
+      margin-bottom: 16px;
+    }
+
+    .step-card-1 {
+      background: linear-gradient(160deg, #e4873f 0%, #d07030 100%);
+    }
+
+    .step-card-2 {
+      background: linear-gradient(160deg, #f0c23e 0%, #e4b42e 100%);
+    }
+
+    .step-card-3 {
+      background: linear-gradient(160deg, #cf6858 0%, #c05848 100%);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .step-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    .step-label {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .step-label span {
+      font-weight: 400;
+    }
+
+    /* Step 1 items */
+    .goal-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .goal-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .goal-bubble {
+      background: rgba(255, 255, 255, 0.9);
+      color: #3a3a5c;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 10px 16px;
+      border-radius: 12px;
+      flex-shrink: 1;
+    }
+
+    .goal-icon-right {
+      margin-left: auto;
+      opacity: 0.7;
+    }
+
+    .goal-icon-right svg,
+    .goal-icon-left svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+
+    .goal-icon-left {
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+
+    .goal-row-offset {
+      padding-left: 32px;
+    }
+
+    /* Step 2 items */
+    .task-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 10px 16px;
+      border-radius: 12px;
+    }
+
+    .task-check {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .task-check svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .task-text {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #3a3a5c;
+    }
+
+    /* Step 3 items */
+    .step3-content {
+      text-align: center;
+    }
+
+    .step3-bubble {
+      background: rgba(255, 255, 255, 0.85);
+      color: #3a3a5c;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 10px 16px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .step3-icons {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .step3-icons svg {
+      width: 36px;
+      height: 36px;
+      fill: #fff;
+      opacity: 0.85;
+    }
+
+    /* ---- Sticky Bottom Buttons ---- */
+    .sticky-buttons {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 12px 36px;
+      padding-bottom: max(12px, env(safe-area-inset-bottom));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 20%, #fff 40%);
+    }
+
+    .sticky-buttons-inner {
+      max-width: 420px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+      opacity: 0.9;
+    }
+
+    .btn-waitlist {
+      background: #3030a0;
+      color: #fff;
+    }
+
+    .btn-whatsapp {
+      background: #3cc860;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="hero-title">HeyBoss</h1>
+      <p class="hero-subtitle">
+        Tell HeyBoss your goals.<br>
+        Your digital employees plan &amp; execute
+      </p>
+      <div class="badges">
+        <span class="badge">No prompts</span>
+        <span class="badge">No learning curve</span>
+        <span class="badge">Always secured</span>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="section-indicator">
+        <div class="indicator-dot"></div>
+        <div class="indicator-dot active"></div>
+      </div>
+      <h2 class="section-title">How It Works</h2>
+
+      <!-- Step 1 -->
+      <div class="step-card step-card-1">
+        <div class="step-header">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="step-label">Step 1 - <span>Share your goal</span></div>
+        </div>
+        <div class="goal-items">
+          <div class="goal-item">
+            <div class="goal-bubble">'Launch my Etsy shop by March'</div>
+            <div class="goal-icon-right">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM11 5h2v6h-2zm0 8h2v2h-2z"/></svg>
+            </div>
+          </div>
+          <div class="goal-item goal-row-offset">
+            <div class="goal-icon-left">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-3 12H7v-2h10v2zm0-3H7V9h10v2zm0-3H7V6h10v2z"/></svg>
+            </div>
+            <div class="goal-bubble">'Learn a new language in 6 mo'</div>
+          </div>
+          <div class="goal-item">
+            <div class="goal-bubble">'Connect with 50 clients per day'</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card step-card-2">
+        <div class="step-header">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="step-label">Step 2 - <span>HeyBoss breaks it into tasks and to-dos</span></div>
+        </div>
+        <div class="task-items">
+          <div class="task-item">
+            <div class="task-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#a0a0b0" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="task-text">Market research for popular products on Etsy</span>
+          </div>
+          <div class="task-item">
+            <div class="task-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#a0a0b0" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="task-text">Listen to Spanish podcast for 45 mins</span>
+          </div>
+          <div class="task-item">
+            <div class="task-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#a0a0b0" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="task-text">Search for leads and make a list on Excel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card step-card-3">
+        <div class="step-header">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="step-label">Step 3 - <span>Be a boss!</span></div>
+        </div>
+        <div class="step3-content">
+          <div class="step3-bubble">Daily reminder &amp; Your employees do it for you</div>
+          <div class="step3-icons">
+            <!-- clipboard+ icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              <line x1="12" y1="11" x2="12" y2="17"/>
+              <line x1="9" y1="14" x2="15" y2="14"/>
+            </svg>
+            <!-- transfer icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="17 1 21 5 17 9"/>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+              <polyline points="7 23 3 19 7 15"/>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+            </svg>
+            <!-- people icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Sticky Bottom Buttons -->
+  <div class="sticky-buttons">
+    <div class="sticky-buttons-inner">
+      <a href="#waitlist" class="btn btn-waitlist">Join the Waitlist</a>
+      <a href="#whatsapp" class="btn btn-whatsapp">Join WhatsApp Group</a>
+    </div>
+  </div>
+</body>
+</html>
