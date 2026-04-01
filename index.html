@@ -33,7 +33,7 @@
       margin: 0 auto;
       background: #fff;
       min-height: 100vh;
-      padding-bottom: 140px; /* space for sticky buttons */
+      padding-bottom: 140px;
     }
 
     /* ---- Hero Section ---- */
@@ -316,14 +316,11 @@
     <!-- Hero -->
     <section class="hero">
       <h1 class="hero-title">HeyBoss</h1>
-      <p class="hero-subtitle">
-        Tell HeyBoss your goals.<br>
-        Your digital employees plan &amp; execute
-      </p>
+      <p class="hero-subtitle" data-i18n="subtitle"></p>
       <div class="badges">
-        <span class="badge">No prompts</span>
-        <span class="badge">No learning curve</span>
-        <span class="badge">Always secured</span>
+        <span class="badge" data-i18n="badge1"></span>
+        <span class="badge" data-i18n="badge2"></span>
+        <span class="badge" data-i18n="badge3"></span>
       </div>
     </section>
 
@@ -333,7 +330,7 @@
         <div class="indicator-dot"></div>
         <div class="indicator-dot active"></div>
       </div>
-      <h2 class="section-title">How It Works</h2>
+      <h2 class="section-title" data-i18n="sectionTitle"></h2>
 
       <!-- Step 1 -->
       <div class="step-card step-card-1">
@@ -341,11 +338,11 @@
           <div class="step-icon">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           </div>
-          <div class="step-label">Step 1 - <span>Share your goal</span></div>
+          <div class="step-label" data-i18n="step1label"></div>
         </div>
         <div class="goal-items">
           <div class="goal-item">
-            <div class="goal-bubble">'Launch my Etsy shop by March'</div>
+            <div class="goal-bubble" data-i18n="goal1"></div>
             <div class="goal-icon-right">
               <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM11 5h2v6h-2zm0 8h2v2h-2z"/></svg>
             </div>
@@ -354,10 +351,10 @@
             <div class="goal-icon-left">
               <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-3 12H7v-2h10v2zm0-3H7V9h10v2zm0-3H7V6h10v2z"/></svg>
             </div>
-            <div class="goal-bubble">'Learn a new language in 6 mo'</div>
+            <div class="goal-bubble" data-i18n="goal2"></div>
           </div>
           <div class="goal-item">
-            <div class="goal-bubble">'Connect with 50 clients per day'</div>
+            <div class="goal-bubble" data-i18n="goal3"></div>
           </div>
         </div>
       </div>
@@ -368,26 +365,26 @@
           <div class="step-icon">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           </div>
-          <div class="step-label">Step 2 - <span>HeyBoss breaks it into tasks and to-dos</span></div>
+          <div class="step-label" data-i18n="step2label"></div>
         </div>
         <div class="task-items">
           <div class="task-item">
             <div class="task-check">
               <svg viewBox="0 0 24 24" fill="none" stroke="#a0a0b0" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <span class="task-text">Market research for popular products on Etsy</span>
+            <span class="task-text" data-i18n="task1"></span>
           </div>
           <div class="task-item">
             <div class="task-check">
               <svg viewBox="0 0 24 24" fill="none" stroke="#a0a0b0" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <span class="task-text">Listen to Spanish podcast for 45 mins</span>
+            <span class="task-text" data-i18n="task2"></span>
           </div>
           <div class="task-item">
             <div class="task-check">
               <svg viewBox="0 0 24 24" fill="none" stroke="#a0a0b0" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <span class="task-text">Search for leads and make a list on Excel</span>
+            <span class="task-text" data-i18n="task3"></span>
           </div>
         </div>
       </div>
@@ -398,26 +395,23 @@
           <div class="step-icon">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           </div>
-          <div class="step-label">Step 3 - <span>Be a boss!</span></div>
+          <div class="step-label" data-i18n="step3label"></div>
         </div>
         <div class="step3-content">
-          <div class="step3-bubble">Daily reminder &amp; Your employees do it for you</div>
+          <div class="step3-bubble" data-i18n="step3bubble"></div>
           <div class="step3-icons">
-            <!-- clipboard+ icon -->
             <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
               <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
               <line x1="12" y1="11" x2="12" y2="17"/>
               <line x1="9" y1="14" x2="15" y2="14"/>
             </svg>
-            <!-- transfer icon -->
             <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="17 1 21 5 17 9"/>
               <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
               <polyline points="7 23 3 19 7 15"/>
               <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
             </svg>
-            <!-- people icon -->
             <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
@@ -433,9 +427,93 @@
   <!-- Sticky Bottom Buttons -->
   <div class="sticky-buttons">
     <div class="sticky-buttons-inner">
-      <a href="https://forms.gle/MYRJ6dsEr7Xmh4oT8" class="btn btn-waitlist" target="_blank" rel="noopener">Join the Waitlist</a>
-      <a href="https://chat.whatsapp.com/CaTTyVcsBT34GMryvNtAQO?mode=gi_t" class="btn btn-whatsapp" target="_blank" rel="noopener">Join WhatsApp Group</a>
+      <a href="https://forms.gle/MYRJ6dsEr7Xmh4oT8" class="btn btn-waitlist" target="_blank" rel="noopener" data-i18n="btnWaitlist"></a>
+      <a href="https://chat.whatsapp.com/CaTTyVcsBT34GMryvNtAQO?mode=gi_t" class="btn btn-whatsapp" target="_blank" rel="noopener" data-i18n="btnWhatsapp"></a>
     </div>
   </div>
+
+  <script>
+    const translations = {
+      en: {
+        subtitle:     'Tell HeyBoss your goals.<br>Your digital employees plan &amp; execute',
+        badge1:       'No prompts',
+        badge2:       'No learning curve',
+        badge3:       'Always secured',
+        sectionTitle: 'How It Works',
+        step1label:   'Step 1 - <span>Share your goal</span>',
+        goal1:        '\'Launch my Etsy shop by March\'',
+        goal2:        '\'Learn a new language in 6 mo\'',
+        goal3:        '\'Connect with 50 clients per day\'',
+        step2label:   'Step 2 - <span>HeyBoss breaks it into tasks and to-dos</span>',
+        task1:        'Market research for popular products on Etsy',
+        task2:        'Listen to Spanish podcast for 45 mins',
+        task3:        'Search for leads and make a list on Excel',
+        step3label:   'Step 3 - <span>Be a boss!</span>',
+        step3bubble:  'Daily reminder &amp; Your employees do it for you',
+        btnWaitlist:  'Join the Waitlist',
+        btnWhatsapp:  'Join WhatsApp Group',
+      },
+      es: {
+        subtitle:     'Dile a HeyBoss tus metas.<br>Tus empleados digitales planifican y ejecutan',
+        badge1:       'Sin prompts',
+        badge2:       'Sin curva de aprendizaje',
+        badge3:       'Siempre seguro',
+        sectionTitle: 'Cómo Funciona',
+        step1label:   'Paso 1 - <span>Comparte tu meta</span>',
+        goal1:        '\'Lanzar mi tienda Etsy en marzo\'',
+        goal2:        '\'Aprender un idioma nuevo en 6 meses\'',
+        goal3:        '\'Conectar con 50 clientes por día\'',
+        step2label:   'Paso 2 - <span>HeyBoss lo divide en tareas y pendientes</span>',
+        task1:        'Investigación de mercado en Etsy',
+        task2:        'Escuchar podcast en español 45 minutos',
+        task3:        'Buscar leads y crear lista en Excel',
+        step3label:   'Paso 3 - <span>¡Sé el jefe!</span>',
+        step3bubble:  'Recordatorio diario &amp; tus empleados lo hacen por ti',
+        btnWaitlist:  'Unirse a la Lista de Espera',
+        btnWhatsapp:  'Unirse al Grupo de WhatsApp',
+      },
+      pt: {
+        subtitle:     'Diga ao HeyBoss seus objetivos.<br>Seus funcionários digitais planejam e executam',
+        badge1:       'Sem prompts',
+        badge2:       'Sem curva de aprendizado',
+        badge3:       'Sempre seguro',
+        sectionTitle: 'Como Funciona',
+        step1label:   'Passo 1 - <span>Compartilhe seu objetivo</span>',
+        goal1:        '\'Lançar minha loja Etsy em março\'',
+        goal2:        '\'Aprender um novo idioma em 6 meses\'',
+        goal3:        '\'Conectar com 50 clientes por dia\'',
+        step2label:   'Passo 2 - <span>HeyBoss divide em tarefas e afazeres</span>',
+        task1:        'Pesquisa de mercado para produtos no Etsy',
+        task2:        'Ouvir podcast em espanhol por 45 minutos',
+        task3:        'Buscar leads e criar lista no Excel',
+        step3label:   'Passo 3 - <span>Seja o chefe!</span>',
+        step3bubble:  'Lembrete diário &amp; seus funcionários fazem por você',
+        btnWaitlist:  'Entrar na Lista de Espera',
+        btnWhatsapp:  'Entrar no Grupo do WhatsApp',
+      },
+    };
+
+    function detectLang() {
+      const langs = navigator.languages || [navigator.language || 'en'];
+      for (const l of langs) {
+        const code = l.toLowerCase().split('-')[0];
+        if (translations[code]) return code;
+      }
+      return 'en';
+    }
+
+    function applyTranslations(lang) {
+      const t = translations[lang] || translations['en'];
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) {
+          el.innerHTML = t[key];
+        }
+      });
+    }
+
+    applyTranslations(detectLang());
+  </script>
 </body>
 </html>
